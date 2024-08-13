@@ -1,0 +1,293 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    background-color: #F2DC9B;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #A64833;
+}
+
+header {
+    background-color: #F2DC9B;
+    color: #A64833;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a div.menu */
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li a {
+    color: #A65233;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content {
+    background-color: #fff;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+aside h2 {
+    font-size: 24px;
+}
+
+/* footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #F2DC9B;
+    bottom: 0;
+    width: 100%;
+    font-size: smaller;
+    position: fixed;
+} */
+
+/* Estilos do slideshow */
+.slideshow-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100vw;
+    height: 600px;
+}
+
+/* Botões de navegação */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #A65233;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #f6cba1;
+}
+
+/* barra de pesquisa */
+.search-container {
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center; /* Alinha os itens dentro do contêiner de pesquisa */
+}
+
+.search-container i {
+    margin-right: 8px;
+    color: #888;
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.search-container button {
+    border: none;
+    background-color: #D9B341;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #F2DC9B;
+}
+
+#logo {
+    height: 40px;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo básico do meu menu */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #f3e8c8;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* Animação do menu */
+.menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #A64833;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+#i2 {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.hover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #d5bc6f5e;
+        color: #fff;
+    }
+    
+    .footer-column {
+        flex: 1;
+        padding: 0 20px;
+    }
+    
+    .footer-column h3 {
+        margin-top: 0;
+    }
+    
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-column ul li {
+        margin: 5px 0;
+    }
+    
+    .footer-column ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-column ul li a:hover {
+        text-decoration: underline;
+    }
+
+/* .hover-container:hover .hover-text:hover {
+    visibility: visible;
+    opacity: 1;
+} */

@@ -1,0 +1,410 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.obrigada {
+    font-weight: 400px;
+    color: #A64833;
+    font-size: xx-large;
+    padding-top: 340px ;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+#seta{
+    
+    height: 40px;
+    width: 40px;
+}
+.obrigada.show {
+    opacity: 1;
+}
+.text {
+    background-color: #A64833;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    padding: 7px;
+}
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../img/loginrailli.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Mantém a imagem fixa enquanto a página é rolada */
+
+}
+
+main {
+    background-color: #f3e8c8;
+}
+
+.popup-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.linha1 {
+    gap: 10px;
+    display: flex;
+}
+
+.popup-container img {
+    height: 300px;
+    width: 200px;
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    background-color: #F2DC9B;
+    color: #A64833;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; Alinha verticalmente os itens no centro */
+    position: relative;
+    padding-left: 20px;
+}
+
+.logo {
+    height: 60px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#i2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-container>a {
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-text {
+    padding-top: 0;
+    text-align: center;
+    visibility: hidden;
+    width: 50px;
+    background-color: #a6483395;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    /* Posiciona o texto acima da imagem */
+    left: 200%;
+    margin-left: -100px;
+    /* Metade da largura do texto para centralizá-lo */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilo básico do meu menu */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #f3e8c8;
+    color: #A64833;
+    border-radius: 10px;
+}
+
+/* Animação do menu */
+.menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #A64833;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d5bc6f5e;
+    color: #fff;
+}
+
+.footer {
+    width: auto;
+    background-color: #b5d593;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #A64833;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #007BFF;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.popup-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    /* Centraliza o conteúdo do contêiner */
+}
+
+.popup-container img {
+    transition: transform 0.3s;
+}
+
+.popup-container:hover img {
+    animation: popup 0.6s forwards;
+    /* Inicia a animação de pop-up */
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.popup-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-radius: 10px;
+    color: #A64833;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+form label {
+    display: block;
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 100;
+    color: #A65233;
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week], input[type=CPF] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #A65233;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid#A65233;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.styled-textarea {
+    height: 90px; /* Ajuste a altura conforme necessário */
+    resize: none; /* Impede o redimensionamento */
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #A65233;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid#A65233;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+  
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #f7ce48;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color:#fad458bf;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #eb9903;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #c27013;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: #372991;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+fieldset {
+    border: 0.5px dotted #372991;
+}
+
+fieldset > legend {
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}

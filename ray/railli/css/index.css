@@ -1,0 +1,254 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.anun img{
+    height: 590px;
+    width: 100%;
+    
+}
+html {
+    overflow-x: hidden;
+}
+.text{
+    background-color: #A64833;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    padding: 7px;
+}
+
+/* Estilos gerais */
+body {
+    background-color: #F2DC9B;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #A64833;
+}
+main{
+    background-color: #f3e8c8;
+}
+.popup-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+border-radius: 10px;
+}
+.linha1{ 
+    gap: 10px;
+    display: flex;
+}
+.popup-container img{
+    height: 300px;
+    width: 200px;
+    margin: auto;
+}
+header {
+    position: fixed;
+    background-color: #F2DC9B;
+    color: #A64833;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; Alinha verticalmente os itens no centro */
+    position: relative;
+    padding-left: 20px;
+}
+.logo {
+    height: 60px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#i2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 80px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.hover-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-container > a {
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-text {
+    padding-top: 0;
+    text-align: center;
+    visibility: hidden;
+    width: 50px;
+    background-color: #a6483395;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%; /* Posiciona o texto acima da imagem */
+    left: 200%;
+    margin-left: -100px; /* Metade da largura do texto para centralizá-lo */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+/* Estilo básico do meu menu */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #f3e8c8;
+    color: #A64833;
+    border-radius: 10px;
+}
+
+/* Animação do menu */
+.menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #A64833;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d5bc6f5e;
+    color: #fff;
+}
+
+.footer {
+    width: auto;
+    background-color: #b5d593;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #A64833;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #007BFF;
+}
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.popup-container {
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Centraliza o conteúdo do contêiner */
+}
+
+.popup-container img {
+    transition: transform 0.3s;
+}
+
+.popup-container:hover img {
+    animation: popup 0.6s forwards; /* Inicia a animação de pop-up */
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.popup-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Railli</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/FotoJet-_1_.ico" type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <div class="hover-container">
+            <a href="entrar.html">
+                <img id="i2" src="img/person-circle.png" alt="log-in" />
+            </a>
+            <div class="hover-text">log-in</div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Coleções</a></li>
+                <li><a href="#">Lojas</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit">Pesquisar</button>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="img/1.jpg" alt="Imagem 1">
+            </div>
+            <div class="slide">
+                <img src="img/2.jpg" alt="Imagem 2">
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" alt="Imagem 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        
+        </script>
+</body>
+<footer>
+    <div class="footer-column">
+        <h3>Contato</h3>
+        <p>Telefone: (123) 456-7890</p>
+        <p>Email: contato@exemplo.com</p>
+    </div>
+</footer>
+</html>

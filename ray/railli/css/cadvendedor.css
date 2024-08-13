@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+/* ELEMENTOS DA INTERFACE */
+
+body {
+    background-color: rgb(184,92,53);
+    background-image: linear-gradient(180deg, #b4693c), #f7ce48;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas:
+    "divlogo divform";
+    grid-template-rows: 100vh;
+    grid-template-columns: 50vw 50vw;
+}
+
+html {
+    overflow-x: hidden;
+}
+.num{
+   display: flex;
+   flex-direction: column-reverse;
+   
+}
+
+.divform{
+    padding-top: 4vw;
+    grid-area: divform;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:30px ;
+}
+.divlogo{
+    grid-area: divlogo;
+    background-color:#F2F2F2; 
+    box-shadow: 0 0 9px rgba(32, 31, 31, 0.5);
+
+    
+}
+img{
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3vw; 
+}
+
+header, main, section, article {
+    max-width: 700px;
+}
+
+ header > h1 {
+    color: white;
+    padding: 4px;
+    font-weight: 100;
+    font-style: inherit;
+} 
+
+/* main, section, article {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+} */
+ 
+
+
+p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+h2, h3, h4 {
+    color: #372991;
+    margin: 0 0 10px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* TABELAS E LISTAS */
+
+table {
+    min-width: 400px;
+    border-spacing: 0px;
+    border: 0.5px solid #372991;
+    margin: 10px auto;
+}
+
+table th {
+    background-color: #372991;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+table td {
+    padding: 5px;
+}
+
+table tr {
+    background-color: rgba(55, 41, 145, 0.05);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgba(55, 41, 145, 0.3);
+}
+
+table.divisao {
+    border: 1px solid white;
+}
+
+table.divisao td {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+table.divisao  tr:nth-child(1) td:nth-child(2) {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(2) {
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(1) {
+    text-decoration: underline;
+}
+
+ul > li::marker {
+    color: #372991;
+}
+
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    width: 500px;
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-radius: 10px;
+    color: #A64833;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+   flex: content;
+   flex-direction: column;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #A65233;
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week], input[type=CPF] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #A65233;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid#A65233;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #f7ce48;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color:#fad458bf;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #eb9903;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #c27013;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: #372991;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+fieldset {
+    border: 0.5px dotted #372991;
+}
+
+fieldset > legend {
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
